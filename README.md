@@ -13,17 +13,18 @@ The dataset for this project was sourced from Kaggle and initially contained the
 
 ### **Steps in Data Cleaning and Preprocessing**:
 1. **Dropped Redundant Columns**:
+     <br>
    - Removed `RowNumber`, `CustomerId`, `Surname`, and `Complain` to simplify processing and avoid multicollinearity.
      <br>
      ![image](https://github.com/user-attachments/assets/f44f65a3-c0c9-44d4-9360-9934e37e6d32)
 
-2. **Handled Missing Values**:
+3. **Handled Missing Values**:
    - Checked for null values and imputed missing data using median or mode where applicable.
-3. **Encoded Categorical Features**:
+4. **Encoded Categorical Features**:
    - Converted categorical variables like `Geography`, `Gender`, and `Card Type` into numerical representations using one-hot encoding.
-4. **Feature Scaling**:
+5. **Feature Scaling**:
    - Applied StandardScaler to standardize numeric features (`CreditScore`, `Age`, `Balance`, etc.) for better model performance.
-5. **Addressed Class Imbalance**:
+6. **Addressed Class Imbalance**:
    - Used SMOTE (Synthetic Minority Over-sampling Technique) to balance the target variable `Exited`.
 
 After preprocessing, the data was divided into:
