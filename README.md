@@ -26,7 +26,8 @@ The dataset for this project was sourced from Kaggle and initially contained the
    - Applied StandardScaler to standardize numeric features (`CreditScore`, `Age`, `Balance`, etc.) for better model performance.
 6. **Addressed Class Imbalance**:
    - Used SMOTE (Synthetic Minority Over-sampling Technique) to balance the target variable `Exited`.<br>
-     <img width="455" alt="image" src="https://github.com/user-attachments/assets/a42dc1d9-5dad-4382-980c-561c49a7db75" />
+     <img width="577" alt="image" src="https://github.com/user-attachments/assets/aa766b57-c2c1-43f0-ad8c-907bc3d7c1d9" />
+
 
 
 After preprocessing, the data was divided into:
