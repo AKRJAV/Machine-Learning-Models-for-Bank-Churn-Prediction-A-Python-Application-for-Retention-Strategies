@@ -47,10 +47,9 @@ Multiple machine learning models were trained and evaluated using various metric
 
 
 ### **AUC-ROC Curve**
-The AUC-ROC curve demonstrates the model's high discriminatory power:
-
-![AUC-ROC Curve](./Sample_Visualizations/auc_roc_curve.png)
-
+<br>
+![image](https://github.com/user-attachments/assets/e2bcfd54-559b-4711-b743-0f0454621e6d)
+<br>
 ---
 
 ## **Python GUI Application**
