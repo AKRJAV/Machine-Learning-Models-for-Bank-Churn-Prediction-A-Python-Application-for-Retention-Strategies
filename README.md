@@ -23,7 +23,9 @@ The dataset for this project was sourced from Kaggle and initially contained the
      <img width="872" alt="image" src="https://github.com/user-attachments/assets/8748a9a0-eddb-408e-8234-73151e76ff85" />
 
 5. **Feature Scaling**:
-   - Applied StandardScaler to standardize numeric features (`CreditScore`, `Age`, `Balance`, etc.) for better model performance.
+   - Applied StandardScaler to standardize numeric features (`CreditScore`, `Age`, `Balance`, etc.) for better model performance.<br>
+     <img width="330" alt="image" src="https://github.com/user-attachments/assets/1abe6527-4528-41d8-a1d6-d880fffeeccd" />
+
 6. **Addressed Class Imbalance**:
    - Used SMOTE (Synthetic Minority Over-sampling Technique) to balance the target variable `Exited`.<br>
      <img width="577" alt="image" src="https://github.com/user-attachments/assets/aa766b57-c2c1-43f0-ad8c-907bc3d7c1d9" />
