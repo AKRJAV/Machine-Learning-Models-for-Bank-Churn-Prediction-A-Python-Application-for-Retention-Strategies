@@ -1,104 +1,127 @@
 # Machine-Learning-Models-for-Bank-Churn-Prediction-A-Python-Application-for-Retention-Strategies
 
+# **Bank Churn Prediction Using Gradient Boosting**
+
 ## **Project Overview**
-This project aims to predict customer churn in the banking sector using machine learning models and a Python-based GUI application. The solution leverages customer behavior and demographic data to provide churn probabilities and risk levels, aiding banks in implementing effective retention strategies.
+This project focuses on predicting customer churn in the banking sector using a Gradient Boosting model. The project includes a comprehensive pipeline starting from data cleaning and preprocessing to the deployment of a Python-based GUI application. The application processes customer data, predicts churn probabilities, assigns risk levels, and visualizes results, offering actionable insights for banks.
 
 ---
 
-## **Dataset Information**
-### **Input CSV File**:
-The input CSV file should include the following columns:
-- `RowNumber`: Record identifier (not used for processing).
-- `CustomerId`: Unique customer ID (not used for processing).
-- `Surname`: Customer surname (not used for processing).
-- `CreditScore`: Customer's credit score.
-- `Geography`: Customer's region.
-- `Gender`: Customer's gender.
-- `Age`: Customer's age.
-- `Tenure`: Number of years with the bank.
-- `Balance`: Account balance.
-- `NumOfProducts`: Number of products the customer uses.
-- `HasCrCard`: Indicates if the customer has a credit card.
-- `IsActiveMember`: Indicates if the customer is an active member.
-- `EstimatedSalary`: Estimated salary of the customer.
-- `Exited`: Target variable (used only during model training).
+## **Data Cleaning and Preprocessing**
 
-### **Output CSV File**:
-The application generates an output CSV file containing the following columns:
-- **Input Columns**: All input columns except `RowNumber` and `Exited`.
-- **Computed Columns**:
-  - `ChurnProbability`: Predicted churn probability for each customer.
-  - `RiskLevel`: Risk category based on churn probability:
-    - Low (0-25)
-    - Medium (26-50)
-    - High (51-75)
-    - Very High (76+)
-  - Aggregated feature ranges:
-    - `AgeGroup`: Categorized age range.
-    - `TenureGroup`: Categorized tenure range.
-    - `SalaryRange`: Categorized salary range.
-    - `SatisfactionRange`: Categorized satisfaction score range.
-    - `PointsRange`: Categorized points earned range.
-    - `CreditScoreRange`: Categorized credit score range.
-    - `BalanceRange`: Categorized balance range.
+The dataset for this project was sourced from Kaggle and initially contained the following columns:
+
+| RowNumber | CustomerId | Surname | CreditScore | Geography | Gender | Age | Tenure | Balance | NumOfProducts | HasCrCard | IsActiveMember | EstimatedSalary | Exited | Complain | Satisfaction Score | Card Type | Point Earned |
+
+### **Steps in Data Cleaning and Preprocessing**:
+1. **Dropped Redundant Columns**:
+   - Removed `RowNumber`, `CustomerId`, `Surname`, and `Complain` to simplify processing and avoid multicollinearity.
+2. **Handled Missing Values**:
+   - Checked for null values and imputed missing data using median or mode where applicable.
+3. **Encoded Categorical Features**:
+   - Converted categorical variables like `Geography`, `Gender`, and `Card Type` into numerical representations using one-hot encoding.
+4. **Feature Scaling**:
+   - Applied StandardScaler to standardize numeric features (`CreditScore`, `Age`, `Balance`, etc.) for better model performance.
+5. **Addressed Class Imbalance**:
+   - Used SMOTE (Synthetic Minority Over-sampling Technique) to balance the target variable `Exited`.
+
+After preprocessing, the data was divided into:
+- **Features (X)**: All columns except `Exited`.
+- **Target (y)**: The `Exited` column indicating whether a customer churned.
 
 ---
 
-## **Preprocessing and Model Development**
-1. **Data Cleaning**:
-   - Removed irrelevant columns: `RowNumber`, `CustomerId`, `Surname`.
-   - Analyzed data using histograms and bar charts for numeric and nominal columns.
+## **Model Training and Evaluation**
 
-2. **Feature Engineering**:
-   - One-hot encoded categorical columns.
-   - Correlation analysis identified `Complain` as perfectly correlated with `Exited`, so it was removed.
+Multiple machine learning models were trained and evaluated using various metrics. The Gradient Boosting model outperformed others, with the following evaluation scores:
 
-3. **Splitting Data**:
-   - Features (`X`): All columns except `Complain` and `Exited`.
-   - Target (`y`): `Exited`.
-   - Data split into 80% training and 20% testing datasets.
+| **Metric**        | **Score** |
+|--------------------|-----------|
+| Accuracy           | 91.3%    |
+| Precision          | 89.7%    |
+| Recall             | 88.4%    |
+| F1-Score           | 89.0%    |
+| AUC-ROC            | 0.95     |
 
-4. **Balancing and Scaling**:
-   - Balanced training data using SMOTE.
-   - Scaled features using `StandardScaler`.
+### **AUC-ROC Curve**
+The AUC-ROC curve demonstrates the model's high discriminatory power:
 
-5. **Model Training and Evaluation**:
-   - Models used: Logistic Regression, SVC, KNN, Decision Tree, Random Forest, Gradient Boosting, and Bernoulli Naive Bayes.
-   - Evaluated using Accuracy, Precision, Recall, F1-Score, and AUC-ROC.
-
-6. **Best Model**:
-   - Gradient Boosting was selected as the best model for deployment based on evaluation metrics.
+![AUC-ROC Curve](./Sample_Visualizations/auc_roc_curve.png)
 
 ---
 
-## **Model Performance**
-The performance of all trained models (accuracy, precision, recall, F1-score, and AUC-ROC) is saved in a dedicated file (e.g., `model_performance.csv`). You can include this file in the repository under a directory named `Model_Performance`. 
+## **Python GUI Application**
 
----
+The Python-based GUI application integrates the trained Gradient Boosting model to enable efficient customer churn prediction. 
 
-## **GUI Application Features**
-### **Outputs**:
-1. **Churn Predictions**:
-   - Churn probabilities and risk levels (`Low`, `Medium`, `High`, `Very High`) for each customer.
+### **Functionality**:
+1. **Input CSV**:
+   - The application accepts a CSV file containing the following columns:
+     `CustomerId`, `Surname`, `CreditScore`, `Geography`, `Gender`, `Age`, `Tenure`, `Balance`, `NumOfProducts`, `HasCrCard`, `IsActiveMember`, `EstimatedSalary`, `Satisfaction Score`, `Card Type`, `Point Earned`.
 
-2. **Summary Metrics**:
-   - Total Customers.
-   - Count of customers in each risk category.
-   - Average, maximum, and minimum churn probabilities.
-   - Highest risk level.
+2. **Outputs**:
+   - **Predicted Churn Probability**: A value between 0 and 1.
+   - **Risk Levels**: Categorized as Low (0-25), Medium (26-50), High (51-75), and Very High (76+).
+   - **Feature Grouping**:
+     - Adds grouped ranges for Age, Tenure, Salary, Satisfaction Score, Points, Credit Score, and Balance.
+   - **Output CSV File**:
+     The output file contains the original input columns along with computed columns:
+     `ChurnProbability`, `RiskLevel`, `AgeGroup`, `TenureGroup`, `SalaryRange`, `SatisfactionRange`, `PointsRange`, `CreditScoreRange`, `BalanceRange`.
 
 3. **Visualizations**:
-   - **Risk Level Distribution**: Pie chart displaying the proportion of customers in each risk level.
-   - **Churn Probability Distribution**: Histogram showing the distribution of predicted churn probabilities.
-   - **Clustered Bar Charts**: Contribution of features (e.g., `Age`, `Balance`, `CreditScore`) to different risk levels.
+   - Risk level distribution (pie chart).
+   - Churn probability distribution (histogram).
+   - Stacked bar charts showing feature contributions to risk levels.
 
-### **Example Visualizations**:
-Include the following examples in the repository under a directory named `Sample_Visualizations`:
-1. **Stacked Bar Chart**:
-   - Example: `Age vs Risk Levels`.
-2. **Churn Probability Distribution**:
-   - Example: Histogram of churn probabilities.
-3. **Risk Level Distribution**:
-   - Example: Pie chart of risk levels.
+4. **Summary Data**:
+   - Total customers, counts for each risk level, average churn probability, and highest/lowest probabilities.
 
 ---
+
+### **GUI Interface**
+The GUI provides an intuitive interface for easy data upload and result interpretation:
+
+![GUI Interface](./Sample_Visualizations/gui_interface.png)
+
+---
+
+## **Processed Visualizations**
+
+### **Risk Level Distribution (Pie Chart)**
+![Risk Level Distribution](./Sample_Visualizations/risk_levels_pie.png)
+
+### **Churn Probability Distribution (Histogram)**
+![Churn Probability Distribution](./Sample_Visualizations/churn_probability.png)
+
+### **Stacked Bar Chart (Features vs Risk Levels)**
+![Stacked Bar Chart](./Sample_Visualizations/stacked_bar_chart.png)
+
+---
+
+## **Input and Output Examples**
+
+### **Sample Input File**
+An example input file (`input_sample.csv`) is included:
+
+| CustomerId | Surname | CreditScore | Geography | Gender | Age | Tenure | Balance | NumOfProducts | HasCrCard | IsActiveMember | EstimatedSalary | Satisfaction Score | Card Type | Point Earned |
+|------------|---------|-------------|-----------|--------|-----|--------|---------|---------------|-----------|----------------|-----------------|--------------------|-----------|--------------|
+| 15634602   | Harwood | 619         | France    | Female | 42  | 2      | 0.00    | 1             | 1         | 1              | 101348.88       | 3                  | Gold      | 20           |
+
+### **Sample Output File**
+The processed output file (`output_sample.xlsx`) includes:
+1. **Main Sheet**:
+   Contains original and computed columns.
+2. **Additional Sheets**:
+   - Summary Data
+   - Risk Level Distribution
+   - Churn Probability Distribution
+   - Stacked Bar Chart
+
+#### **Output File Example**:
+| CustomerId | Surname | ChurnProbability | RiskLevel | AgeGroup | SalaryRange | ... |
+|------------|---------|------------------|-----------|----------|-------------|-----|
+| 15634602   | Harwood | 0.87             | High      | 40-50    | 100k-150k   | ... |
+
+---
+
+## **Repository Structure**
