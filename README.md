@@ -19,7 +19,9 @@ The dataset for this project was sourced from Kaggle and initially contained the
 3. **Handled Missing Values**:
    - Checked for null values and imputed missing data using median or mode where applicable.
 4. **Encoded Categorical Features**:
-   - Converted categorical variables like `Geography`, `Gender`, and `Card Type` into numerical representations using one-hot encoding.
+   - Converted categorical variables like `Geography`, `Gender`, and `Card Type` into numerical representations using one-hot encoding.<br>
+     <img width="872" alt="image" src="https://github.com/user-attachments/assets/8748a9a0-eddb-408e-8234-73151e76ff85" />
+
 5. **Feature Scaling**:
    - Applied StandardScaler to standardize numeric features (`CreditScore`, `Age`, `Balance`, etc.) for better model performance.
 6. **Addressed Class Imbalance**:
