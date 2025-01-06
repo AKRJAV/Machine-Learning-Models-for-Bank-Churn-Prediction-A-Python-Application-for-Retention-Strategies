@@ -48,7 +48,7 @@ Multiple machine learning models were trained and evaluated using various metric
 
 ### **AUC-ROC Curve**
 <br>
-![image](https://github.com/user-attachments/assets/e2bcfd54-559b-4711-b743-0f0454621e6d)
+![image](https://github.com/user-attachments/assets/ba4226c8-f81b-4f84-bdf3-3d868f5a18c1)
 <br>
 ---
 
