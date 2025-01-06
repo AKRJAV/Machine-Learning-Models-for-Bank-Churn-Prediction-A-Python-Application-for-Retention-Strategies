@@ -106,7 +106,7 @@ An example input file (`input_sample.csv`) is included:
 | 15634602   | Harwood | 619         | France    | Female | 42  | 2      | 0.00    | 1             | 1         | 1              | 101348.88       | 3                  | Gold      | 20           |
 
 ### **Sample Output File**
-The processed output file (`output_sample.xlsx`) includes:
+The processed output file (`output_file.xlsx`) includes:
 1. **Main Sheet**:
    Contains original and computed columns.
 2. **Additional Sheets**:
@@ -119,7 +119,3 @@ The processed output file (`output_sample.xlsx`) includes:
 | CustomerId | Surname | ChurnProbability | RiskLevel | AgeGroup | SalaryRange | ... |
 |------------|---------|------------------|-----------|----------|-------------|-----|
 | 15634602   | Harwood | 0.87             | High      | 40-50    | 100k-150k   | ... |
-
----
-
-## **Repository Structure**
