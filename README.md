@@ -17,7 +17,7 @@ The dataset for this project was sourced from Kaggle and initially contained the
      ![image](https://github.com/user-attachments/assets/f44f65a3-c0c9-44d4-9360-9934e37e6d32)
 
 3. **Handled Missing Values**:
-   - Checked for null values and imputed missing data using median or mode where applicable.
+   - Checked for null values.
 4. **Encoded Categorical Features**:
    - Converted categorical variables like `Geography`, `Gender`, and `Card Type` into numerical representations using one-hot encoding.<br>
      <img width="872" alt="image" src="https://github.com/user-attachments/assets/8748a9a0-eddb-408e-8234-73151e76ff85" />
