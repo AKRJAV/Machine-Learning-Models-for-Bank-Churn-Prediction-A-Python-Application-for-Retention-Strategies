@@ -1,7 +1,5 @@
 # Machine-Learning-Models-for-Bank-Churn-Prediction-A-Python-Application-for-Retention-Strategies
 
-# **Bank Churn Prediction Using Gradient Boosting**
-
 ## **Project Overview**
 This project focuses on predicting customer churn in the banking sector using a Gradient Boosting model. The project includes a comprehensive pipeline starting from data cleaning and preprocessing to the deployment of a Python-based GUI application. The application processes customer data, predicts churn probabilities, assigns risk levels, and visualizes results, offering actionable insights for banks.
 
