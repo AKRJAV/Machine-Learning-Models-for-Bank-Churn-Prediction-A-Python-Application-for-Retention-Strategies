@@ -41,14 +41,10 @@ After preprocessing, the data was divided into:
 ## **Model Training and Evaluation**
 
 Multiple machine learning models were trained and evaluated using various metrics. The Gradient Boosting model outperformed others, with the following evaluation scores:
+<br>
+<img width="404" alt="image" src="https://github.com/user-attachments/assets/8e09dd8c-c74d-4b81-a3cb-6c8ec0ebaf60" />
+<br>
 
-| **Metric**        | **Score** |
-|--------------------|-----------|
-| Accuracy           | 91.3%    |
-| Precision          | 89.7%    |
-| Recall             | 88.4%    |
-| F1-Score           | 89.0%    |
-| AUC-ROC            | 0.95     |
 
 ### **AUC-ROC Curve**
 The AUC-ROC curve demonstrates the model's high discriminatory power:
