@@ -14,6 +14,7 @@ The dataset for this project was sourced from Kaggle and initially contained the
 ### **Steps in Data Cleaning and Preprocessing**:
 1. **Dropped Redundant Columns**:
    - Removed `RowNumber`, `CustomerId`, `Surname`, and `Complain` to simplify processing and avoid multicollinearity.
+     <br>
      ![image](https://github.com/user-attachments/assets/f44f65a3-c0c9-44d4-9360-9934e37e6d32)
 
 2. **Handled Missing Values**:
