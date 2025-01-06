@@ -99,7 +99,7 @@ The GUI provides an intuitive interface for easy data upload and result interpre
 ## **Input and Output Examples**
 
 ### **Sample Input File**
-An example input file (`test_2k customer.csv`) is included:
+An example input file (`test_2k_customer.csv`) is included:
 
 | CustomerId | Surname | CreditScore | Geography | Gender | Age | Tenure | Balance | NumOfProducts | HasCrCard | IsActiveMember | EstimatedSalary | Satisfaction Score | Card Type | Point Earned |
 |------------|---------|-------------|-----------|--------|-----|--------|---------|---------------|-----------|----------------|-----------------|--------------------|-----------|--------------|
