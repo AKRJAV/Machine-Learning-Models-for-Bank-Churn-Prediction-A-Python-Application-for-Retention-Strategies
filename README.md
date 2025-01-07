@@ -102,7 +102,8 @@ The GUI provides an intuitive interface for easy data upload and result interpre
 
 
 ### **Stacked Bar Chart (Features vs Risk Levels)**
-**Example of a feature (Geography) vs risk level**
+<br>
+**Example of a feature (Geography) vs risk level**<br>
 <img width="299" alt="image" src="https://github.com/user-attachments/assets/31872347-172e-4781-9eaf-1a65e93729df" />
 
 ---
