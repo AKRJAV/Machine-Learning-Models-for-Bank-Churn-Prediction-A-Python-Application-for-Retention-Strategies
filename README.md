@@ -93,8 +93,9 @@ The GUI provides an intuitive interface for easy data upload and result interpre
 
 ## **Processed Visualizations**
 
-### **Risk Level Distribution (Pie Chart)**
-![Risk Level Distribution](./Sample_Visualizations/risk_levels_pie.png)
+### **Risk Level Distribution (Bar Chart)**
+![image](https://github.com/user-attachments/assets/78632d39-f23f-427f-920f-acb904b9b8c6)
+
 
 ### **Churn Probability Distribution (Histogram)**
 ![Churn Probability Distribution](./Sample_Visualizations/churn_probability.png)
