@@ -109,26 +109,3 @@ The GUI provides an intuitive interface for easy data upload and result interpre
 
 ---
 
-## **Input and Output Examples**
-
-### **Sample Input File**
-An example input file (`test_2k_customer.csv`) is included:
-
-| CustomerId | Surname | CreditScore | Geography | Gender | Age | Tenure | Balance | NumOfProducts | HasCrCard | IsActiveMember | EstimatedSalary | Satisfaction Score | Card Type | Point Earned |
-|------------|---------|-------------|-----------|--------|-----|--------|---------|---------------|-----------|----------------|-----------------|--------------------|-----------|--------------|
-| 15634602   | Harwood | 619         | France    | Female | 42  | 2      | 0.00    | 1             | 1         | 1              | 101348.88       | 3                  | Gold      | 20           |
-
-### **Sample Output File**
-The processed output file (`output_file.xlsx`) includes:
-1. **Main Sheet**:
-   Contains original and computed columns.
-2. **Additional Sheets**:
-   - Summary Data
-   - Risk Level Distribution
-   - Churn Probability Distribution
-   - Stacked Bar Chart
-
-#### **Output File Example**:
-| CustomerId | Surname | ChurnProbability | RiskLevel | AgeGroup | SalaryRange | ... |
-|------------|---------|------------------|-----------|----------|-------------|-----|
-| 15634602   | Harwood | 0.87             | High      | 40-50    | 100k-150k   | ... |
