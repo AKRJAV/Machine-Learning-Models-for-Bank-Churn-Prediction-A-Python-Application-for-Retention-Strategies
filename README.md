@@ -98,10 +98,12 @@ The GUI provides an intuitive interface for easy data upload and result interpre
 
 
 ### **Churn Probability Distribution (Histogram)**
-![Churn Probability Distribution](./Sample_Visualizations/churn_probability.png)
+<img width="299" alt="image" src="https://github.com/user-attachments/assets/14bbb659-9355-4585-81b4-9268941b9d99" />
+
 
 ### **Stacked Bar Chart (Features vs Risk Levels)**
-![Stacked Bar Chart](./Sample_Visualizations/stacked_bar_chart.png)
+**Example of a feature (Geography) vs risk level**
+<img width="299" alt="image" src="https://github.com/user-attachments/assets/31872347-172e-4781-9eaf-1a65e93729df" />
 
 ---
 
