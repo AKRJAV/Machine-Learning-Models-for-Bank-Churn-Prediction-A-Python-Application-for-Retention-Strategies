@@ -57,6 +57,9 @@ The Python-based GUI application integrates the trained Gradient Boosting model 
 1. **Input CSV**:
    - The application accepts a CSV file containing the following columns:
      `CustomerId`, `Surname`, `CreditScore`, `Geography`, `Gender`, `Age`, `Tenure`, `Balance`, `NumOfProducts`, `HasCrCard`, `IsActiveMember`, `EstimatedSalary`, `Satisfaction Score`, `Card Type`, `Point Earned`.
+<img width="734" alt="image" src="https://github.com/user-attachments/assets/837a5942-2b50-42d9-953e-3207ee1e79f7" />
+
+
 
 2. **Outputs**:
    - **Predicted Churn Probability**: A value between 0 and 1.
@@ -66,9 +69,11 @@ The Python-based GUI application integrates the trained Gradient Boosting model 
    - **Output CSV File**:
      The output file contains the original input columns along with computed columns:
      `ChurnProbability`, `RiskLevel`, `AgeGroup`, `TenureGroup`, `SalaryRange`, `SatisfactionRange`, `PointsRange`, `CreditScoreRange`, `BalanceRange`.
+     <img width="959" alt="image" src="https://github.com/user-attachments/assets/d1ba7b3a-92b3-47ff-991b-35de14cc5b1a" />
+
 
 3. **Visualizations**:
-   - Risk level distribution (pie chart).
+   - Risk level distribution (bar chart).
    - Churn probability distribution (histogram).
    - Stacked bar charts showing feature contributions to risk levels.
 
