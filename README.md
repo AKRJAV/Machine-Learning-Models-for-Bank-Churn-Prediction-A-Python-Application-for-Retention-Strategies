@@ -94,7 +94,7 @@ The GUI provides an intuitive interface for easy data upload and result interpre
 ## **Processed Visualizations**
 
 ### **Risk Level Distribution (Bar Chart)**
-![image](https://github.com/user-attachments/assets/78632d39-f23f-427f-920f-acb904b9b8c6)
+<img width="302" alt="image" src="https://github.com/user-attachments/assets/a8bb80fe-5100-4dfc-bb81-816ff0453826" />
 
 
 ### **Churn Probability Distribution (Histogram)**
