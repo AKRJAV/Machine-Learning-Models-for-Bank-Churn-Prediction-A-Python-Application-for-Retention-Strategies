@@ -80,7 +80,8 @@ The Python-based GUI application integrates the trained Gradient Boosting model 
 ### **GUI Interface**
 The GUI provides an intuitive interface for easy data upload and result interpretation:
 
-![GUI Interface](./Sample_Visualizations/gui_interface.png)
+<img width="625" alt="image" src="https://github.com/user-attachments/assets/78530bd9-9bbf-4432-bc44-9df66ed44fab" />
+
 
 ---
 
