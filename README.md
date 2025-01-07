@@ -75,10 +75,11 @@ The Python-based GUI application integrates the trained Gradient Boosting model 
 3. **Visualizations**:
    - Risk level distribution (bar chart).
    - Churn probability distribution (histogram).
-   - Stacked bar charts showing feature contributions to risk levels.
+   - Stacked bar charts showing all the features contribution to the risk levels.
 
 4. **Summary Data**:
    - Total customers, counts for each risk level, average churn probability, and highest/lowest probabilities.
+   <img width="235" alt="image" src="https://github.com/user-attachments/assets/569e5423-9342-4d12-a927-1146871a6cc8" />
 
 ---
 
